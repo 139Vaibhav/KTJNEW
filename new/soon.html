@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+        <link rel="stylesheet" href="./index.css" />
+       
+</head>
+
+<body>
+        <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="https://ktj.in/main.html" class="olinks">Home</a>
+                        <a href="https://ktj.in/index.php/register" class="olinks">Registration</a>
+                        <a href="https://ktj.in/index.php/events" class="olinks">Event</a>
+                        <a href="https://ktj.in/soon.html" class="olinks">Workshops</a>
+                        <a href="https://ktj.in/soon.html" class="olinks">Exhibition</a>
+                        <a href="https://ktj.in/soon.html" class="olinks">Guest Lecture</a>
+                        <a href="https://ktj.in/soon.html" class="olinks">Accomodation</a>
+                        <a href="https://ktj.in/soon.html" class="olinks">Notices</a>
+                        <a href="https://ktj.in/index.php/sponsors/2019" class="olinks">Sponsors</a>
+                        <a href="https://www.ktj.in/contact.html" class="olinks">Contact us</a>
+                        <a href="https://ktj.in/index.php/login" class="olinks">Login</a>
+                </div>
+        </div>
+
+        <img src="./images/iit.png" class="left other" alt="Snow"></img>
+        <div class="tnavig">
+            <a class="links" href="https://ktj.in/main.html">Home</a>
+                <a class="links" href="https://ktj.in/index.php/register">Registration</a>
+                <a class="links" href="https://ktj.in/index.php/events">Event</a>
+                <a class="links" href="https://ktj.in/soon.html">Workshops</a>
+                <a class="links" href="https://ktj.in/soon.html">Exhibition</a>
+                <a class="links" href="https://ktj.in/soon.html">Guest Lecture</a>
+                <a class="links" href="https://ktj.in/index.php/login">Login</a>
+                <a href="https://ktj.in/soon.html" class="links">Accomodation</a>
+                <a href="https://ktj.in/index.php/sponsors/2019" class="links">Sponsors</a>
+                <a href="https://ktj.in/soon.html" class="links">Notices</a>
+                <a href="https://www.ktj.in/contact.html" class="links">Contact us</a>
+        </div>
+        <span class="navig olink" style="font-size:30px;cursor:pointer" onClick="openNav()">&#9776;</span>
+        <img src="./images/topright.png" class="right other" alt="Snow"></img>
+
+        <div class='wrap'>
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+        </div>
+        <main class="main">
+                <div class="container">
+                        <div class="middle">
+                                
+                                <p class="soon">Coming Soon !!</p>
+                        </div>
+                        <div style="clear:both" style="color: white;"></div>
+                        <div class="bottom">
+                                <a href="https://www.facebook.com/ktj.iitkgp/"><img src="./images/facebook.png"
+                                                alt="Snow" class="botlink1"></img></a>
+                                <a href="https://www.instagram.com/ktj.iitkgp/"><img src="./images/instagram.png"
+                                                alt="Snow" class="botlink2"></img></a>
+                                <a href="https://www.youtube.com/channel/UCJBD3V9lQm8d5uYICtePhTA"><img
+                                                src="./images/youtub.png" alt="Snow" class="botlink3"></img></a>
+                        </div>
+                </div>
+        </main>
+</body>
+<script>
+        function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+        }
+        var countDownDate = new Date("Jan 17, 2020 00:00:00").getTime();
+
+
+        var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+        }, 1000);
+</script>
+
+</html>
