@@ -1,0 +1,619 @@
+@charset "UTF-8";
+
+.col-xs-offset-figure {
+    margin-left: 12.333333333333332%;
+}
+
+.figure-sponsorship {
+    border: 2px solid rgb(14, 87, 138);
+    background: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20rem;
+    padding: 2rem 2rem;
+    background-image: url(spons.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    border-radius: 40px 10px 40px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(120, 96, 231, 0.25), 0 10px 10px rgba(197, 177, 223, 0.22);
+}
+
+.figure-sponsorship:before, .figure-sponsorship:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.figure-sponsorship:before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.figure-sponsorship:after {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+.figure-sponsorship:hover {
+    background-size: 175%;
+    cursor: pointer;
+}
+
+.figure-sponsorship:hover:after {
+    content: "︎VIEW TEAM ";
+    background-color: #04246c;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.figure-sponsorship-container {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+}
+
+.figure-sponsorship-heading {
+    color: azure;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(25, 129, 220), 0 0 5px darkblue;
+    font-size: 2rem;
+}
+
+.popup-sponsorship {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20rem;
+    padding: 2rem 2rem;
+    background-color: black;
+    background-image: url(spons.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    border-radius: 40px 10px 40px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.popup-sponsorship-container {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+}
+
+.popup-sponsorship-container h3{
+    font-size: 1.5rem;
+}
+
+/*
+.popup-sponsorship-container:hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    transition: all 0.2s ease-out;
+}
+*/
+.popup-sponsorship-heading {
+    color: azure;
+    font-size: 2rem;
+}
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-close:link, .popup-close:visited {
+    color: red;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.popup-close:hover {
+    color: #fff;
+}
+
+.popup-content {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 50rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-container {
+    width: 100%;
+    margin: 3em auto;
+    text-align: center;
+}
+
+.popup-heading {
+    color: white;
+    font-size: 3rem;
+}
+
+.popup-container-card-spons-one {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-one img {
+    width: 100%;
+}
+
+.popup-container-card-spons-one .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(shivam_headshot.jpg);
+}
+
+.popup-container-card-spons-one .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-one .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+    content: "<a><img src="fb.png" ></a> ";
+    background-color: #f1c40f;
+    color: white;
+    font-size: 100%;
+    z-index: 2; }*/
+.popup-container-card-spons-one-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/***************************************************/
+.popup-container-card-spons-two {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-two img {
+    width: 100%;
+}
+
+.popup-container-card-spons-two .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(deepak_headshot.jpg);
+}
+
+.popup-container-card-spons-two .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-two .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+        content: "<a><img src="fb.png" ></a> ";
+        background-color: #f1c40f;
+        color: white;
+        font-size: 100%;
+        z-index: 2; }*/
+.popup-container-card-spons-two-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/************************************************************/
+.popup-container-card-spons-three {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-three img {
+    width: 100%;
+}
+
+.popup-container-card-spons-three .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(parth_headshot.jpg);
+}
+
+.popup-container-card-spons-three .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-three .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+            content: "<a><img src="fb.png" ></a> ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+/* .popup-container-card-spons-three .figure-sponsorship:hover:after {
+            content: "Name-member - 3 \a contact- 123456789 ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+.popup-container-card-spons-three-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/***************************************************************************************************************/
+.popup-container-card-spons-four {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-four img {
+    width: 100%;
+}
+
+.popup-container-card-spons-four .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(anurag.jpg);
+}
+
+.popup-container-card-spons-four .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-four .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+    content: "<a><img src="fb.png" ></a> ";
+    background-color: #f1c40f;
+    color: white;
+    font-size: 100%;
+    z-index: 2; }*/
+.popup-container-card-spons-four-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+/******************************************************************************************/
+.popup-container-card-spons-five {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-five img {
+    width: 100%;
+}
+
+.popup-container-card-spons-five .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(yash.jpg);
+}
+
+.popup-container-card-spons-five .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-five .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+            content: "<a><img src="fb.png" ></a> ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+/* .popup-container-card-spons-five .figure-sponsorship:hover:after {
+            content: "Name-member - 3 \a contact- 123456789 ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+.popup-container-card-spons-five-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+/*********************************************************************************************/
+/***************************************************/
+.popup-container-card-spons-six {
+    margin: .5em;
+    width: 10vw;
+    height: 15.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-spons-six img {
+    width: 100%;
+}
+
+.popup-container-card-spons-six .popup-sponsorship {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100% 65%;
+    background-position: 0px 10px;
+    background-image: url(yash.jpg);
+}
+
+.popup-container-card-spons-six .popup-sponsorship:after {
+    transition: none;
+}
+
+.popup-container-card-spons-six .popup-sponsorship:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-spons-one .popup-sponsorship:hover:after {
+        content: "<a><img src="fb.png" ></a> ";
+        background-color: #f1c40f;
+        color: white;
+        font-size: 100%;
+        z-index: 2; }*/
+.popup-container-card-spons-six-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/************************************************************/
+
+@media only screen and (max-width: 767px) {
+    .popup-container-card-spons-one, .popup-container-card-spons-two, .popup-container-card-spons-three, .popup-container-card-spons-four,.popup-container-card-spons-five,.popup-container-card-spons-six {
+        width: 18vw;
+        height: 21.5vh;
+    }
+
+    .figure-sponsorship {
+        width: 113%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .popup-container-card-spons-one, .popup-container-card-spons-two, .popup-container-card-spons-three, .popup-container-card-spons-four,.popup-container-card-spons-five,.popup-container-card-spons-six {
+        width: 18vw;
+        height: 20.5vh;
+    }
+
+    .figure-sponsorship {
+        width: 117%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .popup-heading {
+        font-size: 2rem;
+    }
+
+    .popup-close {
+        font-size: 4rem;
+    }
+
+    .popup-container-card-spons-one, .popup-container-card-spons-two, .popup-container-card-spons-three, .popup-container-card-spons-four,.popup-container-card-spons-five,.popup-container-card-spons-six {
+        width: 30vw;
+        height: 20vh;
+        margin: 1em;
+        font-size: .7em;
+        overflow: hidden;
+    }
+
+    .figure-sponsorship {
+        width: 117%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .figure-sponsorship {
+        position: relative;
+        width: 130%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 12rem;
+        padding: 2rem 2rem;
+        background-image: url(spons.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        border-radius: 40px 10px 40px 10px;
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden;
+        box-shadow: 0 14px 28px rgba(120, 96, 231, 0.25), 0 10px 10px rgba(197, 177, 223, 0.22);
+    }
+
+    .figure-sponsorship-heading {
+        color: azure;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        font-size: 1rem;
+    }
+
+    .figure-sponsorship-container {
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translate(-50%, -135%);
+    }
+}

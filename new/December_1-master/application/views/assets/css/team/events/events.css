@@ -1,0 +1,487 @@
+@charset "UTF-8";
+
+.col-xs-offset-figure {
+    margin-left: 12.333333333333332%;
+}
+
+.figure-events {
+    border: 2px solid rgb(14, 87, 138);
+    background: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20rem;
+    padding: 2rem 2rem;
+    background-image: url(events.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    border-radius: 40px 10px 40px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(120, 96, 231, 0.25), 0 10px 10px rgba(197, 177, 223, 0.22);
+}
+
+.figure-events:before, .figure-events:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.figure-events:before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.figure-events:after {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+.figure-events:hover {
+    background-size: 175%;
+    cursor: pointer;
+}
+
+.figure-events:hover:after {
+    content: "︎VIEW TEAM ";
+    background-color: #04246c;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.figure-events-container {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+}
+
+.figure-events-heading {
+    color: azure;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(25, 129, 220), 0 0 5px darkblue;
+    font-size: 2rem;
+}
+
+.popup-events {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20rem;
+    padding: 2rem 2rem;
+    background-color: black;
+    background-image: url(spons.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    border-radius: 40px 10px 40px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.popup-events-container {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 109%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+}
+/*
+.popup-events-container:hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    transition: all 0.2s ease-out;
+}*/
+
+.popup-events-heading {
+    color: azure;
+    font-size: 2rem;
+}
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-close:link, .popup-close:visited {
+    color: red;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.popup-close:hover {
+    color: #fff;
+}
+
+.popup-content {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 50rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-container {
+    width: 100%;
+    margin: 3em auto;
+    text-align: center;
+}
+
+.popup-heading {
+    color: white;
+    font-size: 3rem;
+}
+
+.popup-container-card-one {
+    margin: .5em;
+    width: 12vw;
+    height: 19.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-one img {
+    width: 100%;
+}
+
+.popup-container-card-one .popup-events {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100%;
+    background-image: url(vidhan_headshot.jpg)
+}
+
+.popup-container-card-one .popup-events:after {
+    transition: none;
+}
+
+.popup-container-card-one .popup-events:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-one .popup-events:hover:after {
+    content: "<a><img src="fb.png" ></a> ";
+    background-color: #f1c40f;
+    color: white;
+    font-size: 100%;
+    z-index: 2; }*/
+.popup-container-card-one-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/***************************************************/
+.popup-container-card-two {
+    margin: .5em;
+    width: 12vw;
+    height: 19.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-two img {
+    width: 100%;
+}
+
+.popup-container-card-two .popup-events {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100%;
+    background-image: url(shivam.jpg)
+}
+
+.popup-container-card-two .popup-events:after {
+    transition: none;
+}
+
+.popup-container-card-two .popup-events:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-one .popup-events:hover:after {
+        content: "<a><img src="fb.png" ></a> ";
+        background-color: #f1c40f;
+        color: white;
+        font-size: 100%;
+        z-index: 2; }*/
+.popup-container-card-two-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/************************************************************/
+.popup-container-card-three {
+    margin: .5em;
+    width: 12vw;
+    height: 19.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-three img {
+    width: 100%;
+}
+
+.popup-container-card-three .popup-events {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100%;
+    background-image: url(swatantra_headshot.jpg)
+}
+
+.popup-container-card-three .popup-events:after {
+    transition: none;
+}
+
+.popup-container-card-three .popup-events:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-one .popup-events:hover:after {
+            content: "<a><img src="fb.png" ></a> ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+/* .popup-container-card-three .figure-events:hover:after {
+            content: "Name-member - 3 \a contact- 123456789 ";
+            background-color: #f1c40f;
+            color: white;
+            font-size: 100%;
+            z-index: 2; }*/
+.popup-container-card-three-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/***************************************************************************************************************/
+.popup-container-card-four {
+    margin: .5em;
+    width: 12vw;
+    height: 19.5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 0 3px #9ecaed;
+    box-shadow: 0 0 3px #9ecaed;
+}
+
+.popup-container-card-four img {
+    width: 100%;
+}
+
+.popup-container-card-four .popup-events {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    background-size: 100%;
+    background-image: url(anurag.jpg)
+}
+
+.popup-container-card-four .popup-events:after {
+    transition: none;
+}
+
+.popup-container-card-four .popup-events:hover {
+    cursor: pointer;
+}
+
+/*.popup-container-card-one .popup-events:hover:after {
+    content: "<a><img src="fb.png" ></a> ";
+    background-color: #f1c40f;
+    color: white;
+    font-size: 100%;
+    z-index: 2; }*/
+.popup-container-card-four-detail {
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 25%;
+    font-size: .6em;
+    line-height: 120%;
+    color: #fff;
+    background: #141414;
+    z-index: 10000;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup-container-card-one, .popup-container-card-two, .popup-container-card-three, .popup-container-card-four {
+        width: 18vw;
+        height: 21.5vh;
+    }
+
+    .figure-events {
+        width: 113%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .popup-container-card-one, .popup-container-card-two, .popup-container-card-three, .popup-container-card-four {
+        width: 18vw;
+        height: 20.5vh;
+    }
+
+    .figure-events {
+        width: 117%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .popup-heading {
+        font-size: 2rem;
+    }
+
+    .popup-close {
+        font-size: 4rem;
+    }
+
+    .popup-container-card-one, .popup-container-card-two, .popup-container-card-three, .popup-container-card-four {
+        width: 30vw;
+        height: 20vh;
+        margin: 1em;
+        font-size: .7em;
+        overflow: hidden;
+    }
+
+    .figure-events {
+        width: 117%;
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .figure-events {
+        position: relative;
+        width: 130%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 12rem;
+        padding: 2rem 2rem;
+        background-image: url(events.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        border-radius: 40px 10px 40px 10px;
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden;
+        box-shadow: 0 14px 28px rgba(120, 96, 231, 0.25), 0 10px 10px rgba(197, 177, 223, 0.22);
+    }
+
+    .figure-events-heading {
+        color: azure;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        font-size: 1rem;
+    }
+
+    .figure-events-container {
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translate(-50%, -135%);
+    }
+}

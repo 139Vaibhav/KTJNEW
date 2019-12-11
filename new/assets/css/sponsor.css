@@ -1,0 +1,144 @@
+* {
+     box-sizing: border-box;
+     color: #fff;
+     font-size:50%;
+    
+}
+.tab {
+	position: absolute;
+	left: 45%;
+	top: 24%;
+}
+a
+{
+     text-align: center;
+}
+img
+{
+     font-size: 100% !important;
+     text-align: center;
+}
+
+.sponsors {
+	position: absolute !important;
+	margin-top: 15px !important;
+	padding: 2% !important;
+	top: 35% !important;
+	left: 15% !important;
+	transform: translate(-12%, 0) !important;
+	width: 90% !important;
+     text-align: center !important;
+     align-content: center;
+     
+	border-radius: 10px !important;
+}
+.category {
+	margin: 2em 2em 2em 0em;
+	border-top: 1px solid #fff;
+	padding: 2em 0 2em 0em;
+     text-align: center;
+     
+}
+body
+{
+     background-color: transparent;
+}
+.spons img {
+	width: 10em !important;
+	opacity: 1 !important;
+}
+.spons {
+	padding: 20px 15px 20px 15px !important;
+}
+.tab {
+	/* overflow: hidden; */
+	border: 1px solid #ccc;
+	/* background-color: #f1f1f1; */
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, 0);
+     color: white !important;
+     
+	margin-bottom: 100px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.tab a {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	color: white;
+}
+.tab a:hover
+{
+     background-color: #757575;
+}
+a {
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666;
+	margin: 5px 5px 5px 5px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+}
+.zoom {
+
+     transition: transform .2s;
+     
+   }
+   
+   .zoom:hover {
+     -ms-transform: scale(1.5); /* IE 9 */
+     -webkit-transform: scale(1.5); /* Safari 3-8 */
+     transform: scale(1.5); 
+   }
+
+
+[role="button"],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+a {
+	color: #007bff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+
+
+@media screen and (max-width: 600px)
+{
+     *
+     {
+          font-size:40%;
+     }
+
+     .tablinks
+     {
+          font-size: 50%;
+     }
+     .tab {
+          position: absolute;
+          left: 48%;
+          top: 10%;
+     }
+}
